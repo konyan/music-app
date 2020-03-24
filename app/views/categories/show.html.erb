@@ -1,0 +1,42 @@
+<h1 align="center">
+  <%= @category.name%>
+</h1>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-4">
+    <div class="widget red-bg p-lg text-center">
+            <div class="m-b-md">
+                <i class="fa fa-music fa-4x"></i>
+                <h1 class="m-xs"><%= @category.tracks.count%></h1>
+                <h3 class="font-bold no-margins">
+                    Tracks
+                </h3>
+           <small>total track count</small>
+       </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="widget blue-bg p-lg text-center">
+            <div class="m-b-md">
+                <i class="fa fa-play fa-4x"></i>
+                <h1 class="m-xs"><%= 10%></h1>
+                <h3 class="font-bold no-margins">
+                    Users
+                </h3>
+           <small>total user play count</small>
+       </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="widget yellow-bg p-lg text-center">
+            <div class="m-b-md">
+                <i class="fa fa-fast-forward fa-4x"></i>
+                <h1 class="m-xs"><%= 10%></h1>
+                <h3 class="font-bold no-margins">
+                    Pa Yate
+                </h3>
+           <small>top track play count</small>
+       </div>
+    </div>
+  </div>
+</div>
