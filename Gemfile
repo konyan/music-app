@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'toastr-rails'
+
 
 
 # Use ActiveStorage variant
