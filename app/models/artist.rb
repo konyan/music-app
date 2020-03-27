@@ -1,6 +1,8 @@
 class Artist < ApplicationRecord
 
   has_many :tracks, dependent: :destroy
+  has_one_attached :photo_url
+
 
   validates :name, presence: true,
             length:{minimum:3 , maximum: 50}

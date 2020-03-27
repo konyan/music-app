@@ -40,9 +40,9 @@
                             <td><%= artist.name%></td>
                             <td><%= artist.tracks.count%></td>
                             <td>
-                              <%= link_to "show", category_path(artist), class:"btn btn-primary btn-xs" %>
-                              <%= link_to "Edit", edit_category_path(artist), class:"btn btn-info btn-xs" %>
-                              <%= link_to "Delete", category_path(artist), method: :delete, data: {confirm: "Are you sure to delete artist?"}, class:"btn btn-danger btn-xs"%>
+                              <%= link_to "show", artist_path(artist), class:"btn btn-primary btn-xs" %>
+                              <%= link_to "Edit", edit_artist_path(artist), class:"btn btn-info btn-xs" %>
+                              <%= link_to "Delete", artist_path(artist), method: :delete, data: {confirm: "Are you sure to delete artist?"}, class:"btn btn-danger btn-xs"%>
                             </td>
                         </tr>
                       <% end %>

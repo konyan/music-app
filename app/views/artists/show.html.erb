@@ -1,1 +1,3 @@
-<h1>Artist Detail</h1>
+<h1><%= @artist.name %></h1>
+<%= image_tag(url_for(@artist.photo_url.variant(resize: "400x400")))  if @artist.photo_url.attached?%>
+

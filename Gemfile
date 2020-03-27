@@ -34,11 +34,12 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'toastr-rails'
 
+gem 'activestorage'
 
 
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem "mini_magick"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
