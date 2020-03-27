@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require animate/animate.css
- *= require style
  *= require font-awesome
+ *= require style.scss
  *= require toastr/toastr.min.css
+ *= require summernote/summernote-bs3.css
+ *= require summernote/summernote.css
  */

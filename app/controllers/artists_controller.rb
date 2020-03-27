@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
 
   def index
-
+    @artists = Artist.all
   end
 
   def new
-
+    @artist = Artist.new
   end
 
   def create
@@ -13,7 +13,6 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-
 
   end
 
@@ -24,4 +23,14 @@ class ArtistsController < ApplicationController
   def destroy
 
   end
+
+  private
+
+    def artist_params
+
+    end
+
+    def set_artist
+
+    end
 end
