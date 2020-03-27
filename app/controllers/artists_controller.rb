@@ -39,7 +39,9 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-
+    @artist.destroy
+    flash[:danger] = "Artist was successfully deleted"
+    redirect_to artists_path
   end
 
   private
