@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_064053) do
+ActiveRecord::Schema.define(version: 2020_03_27_154804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_064053) do
     t.integer "length"
     t.integer "category_id"
     t.integer "artist_id"
+    t.string "track_url"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,1 +1,14 @@
-<h1>Track New</h1>
+<%= render '/layouts/errors', obj: @track%>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Create New Track</h5>
+            </div>
+            <div class="ibox-content">
+                <%= render 'form'%>
+            </div>
+        </div>
+    </div>
+</div>

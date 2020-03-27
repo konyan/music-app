@@ -15,7 +15,6 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
-    # debugger
     if @artist.save
       flash[:success] = "Artist was successfully created"
       redirect_to artists_path
@@ -29,12 +28,11 @@ class ArtistsController < ApplicationController
   end
 
   def update
-    # debugger
     if @artist.update(artist_params)
       flash[:success] = "Artist was successfully updated"
       redirect_to artists_path
     else
-      render :new
+      render :edit
     end
   end
 

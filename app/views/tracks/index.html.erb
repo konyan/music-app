@@ -1,1 +1,59 @@
-<h1>Track Index</h1>
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+        <h2>Tracks
+
+        </h2>
+        <ol class="breadcrumb">
+          <li>
+                <a href="<%= url_for :controller => 'dashboards', :action => 'index' %>">Home</a>
+          </li>
+          <li class="active">
+              <strong>Track List</strong>
+          </li>
+        </ol>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                  <h5>Track List</h5>
+                  <div class="ibox-tools">
+                    <%= link_to "Create", new_track_path, class:"btn btn-info btn-xs"%>
+                    </div>
+              </div>
+              <div class="ibox-content">
+                  <table class="table">
+                      <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Category Name</th>
+                          <th>Artist Name</th>
+                          <th>Length</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% @tracks.each do |track|%>
+                        <tr>
+                            <td><%= track.id%></td>
+                            <td><%= track.name%></td>
+                            <td><%= track.category.name%></td>
+                            <td><%= track.artist.name%></td>
+                            <td><%= track.length%></td>
+                            <td>
+                              <%= link_to "show", track_path(track), class:"btn btn-primary btn-xs" %>
+                              <%= link_to "Edit", edit_track_path(track), class:"btn btn-info btn-xs" %>
+                              <%= link_to "Delete", track_path(track), method: :delete, data: {confirm: "Are you sure to delete track?"}, class:"btn btn-danger btn-xs"%>
+                            </td>
+                        </tr>
+                      <% end %>
+                      </tbody>
+                  </table>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
