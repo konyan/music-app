@@ -1,1 +1,2 @@
-<h1 align="center">Show Tracks</h1>
+<h1><%= @track.name %></h1>
+<%= audio_tag url_for(@track.track_url), controls: true if @track.track_url.attached? %>

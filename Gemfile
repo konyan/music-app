@@ -38,6 +38,8 @@ gem 'activestorage'
 
 
 gem 'active_storage_validations'
+gem 'devise'
+
 
 # Use ActiveStorage variant
 gem "mini_magick"
