@@ -1,5 +1,5 @@
 <div class="ibox-content">
-  <%= form_for @track, :html=>{:class => "form-horizontal"} do |f| %>
+  <%= form_for @track, :html=>{:class => "form-horizontal" ,:multipart => true} do |f| %>
     <div class="form-group"><label class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
           <%= f.text_field :name, class:"form-control"%>
@@ -13,21 +13,13 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Select Artists</label>
       <div class="col-sm-10">
-          <%= f.select(:artist_id,class:"form-control m-b") do %>
-            <% @artists.each do |a|%>
-              <%= content_tag(:option, a.name, value: a.id) %>
-            <% end %>
-          <% end %>
+          <%= f.collection_select(:artist_id,@artists, :id, :name,class: "form-control m-b") %>
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-2 control-label">Select Category</label>
       <div class="col-sm-10">
-          <%= f.select(:category_id,class:"form-control m-b") do %>
-            <% @categories.each do |c|%>
-              <%= content_tag(:option, c.name, value: c.id) %>
-            <% end %>
-          <% end %>
+          <%= f.collection_select(:category_id,@categories, :id, :name,class: "form-control m-b") %>
       </div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Subtitle Upload</label>
@@ -51,7 +43,7 @@
     <div class="hr-line-dashed"></div>
     <div class="form-group">
         <div class="col-sm-4 col-sm-offset-2">
-            <%= link_to "Cancel", categories_path, class: "btn btn-white"%>
+            <%= link_to "Cancel", tracks_path, class: "btn btn-white"%>
             <%= f.submit(@track.new_record? ? "Create Track" : "Edit Track", class: "btn btn-primary")%>
         </div>
     </div>

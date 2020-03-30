@@ -29,11 +29,19 @@ class TracksController < ApplicationController
   end
 
   def edit
-
+    @categories = Category.all
+    @artists = Artist.all
   end
 
   def update
-
+    @categories = Category.all
+    @artists = Artist.all
+    if @track.update(track_params)
+      flash[:success] = "Track was successfully updated"
+      redirect_to tracks_path
+    else
+      render :edit
+    end
   end
 
   def destroy

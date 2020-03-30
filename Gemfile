@@ -37,6 +37,7 @@ gem 'toastr-rails'
 gem 'activestorage'
 
 
+gem 'active_storage_validations'
 
 # Use ActiveStorage variant
 gem "mini_magick"
