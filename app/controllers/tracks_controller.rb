@@ -1,6 +1,7 @@
 class TracksController < ApplicationController
 
   before_action :set_tracks, only: [:edit,:update, :show, :destroy]
+  before_action :authenticate_user!
 
   def index
     @tracks = Track.all
@@ -45,13 +46,15 @@ class TracksController < ApplicationController
   end
 
   def destroy
-
+    @track.destroy
+    flash[:danger] = 'Track was successfully deleted.'
+    redirect_to tracks_path
   end
 
   private
 
     def track_params
-      params.require(:track).permit(:name,:description,:translate_text,:length,:category_id,:artist_id,:track_url)
+      params.require(:track).permit(:name,:description,:translate_text,:length,:category_id,:artist_id,:track_url,:image_url)
 
     end
 

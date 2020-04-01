@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
 
   before_action :set_artist, only: [:edit,:update, :show, :destroy]
+  before_action :authenticate_user!
 
   def index
     @artists = Artist.all
