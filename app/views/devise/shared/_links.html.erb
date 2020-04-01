@@ -9,7 +9,8 @@
   <% end %>
 
   <%- if controller_name != 'sessions' %>
-    <%= link_to "Log in", new_session_path(resource_name) %><br />
+ <p class="text-muted text-center"><small>Already have an account?</small></p>
+    <%= link_to "Log in", new_session_path(resource_name) ,class: "btn btn-sm btn-white btn-block" %><br />
   <% end %>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

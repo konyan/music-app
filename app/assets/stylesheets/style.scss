@@ -56,9 +56,15 @@
     display: none;
   }
 
-  body { overflow: visible !important; }
+  body {
+    overflow: visible !important;
+  }
 
   #page-wrapper {
     margin: 0;
   }
+}
+
+.logo-name {
+  margin-left: -100px;
 }
